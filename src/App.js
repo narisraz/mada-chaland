@@ -31,6 +31,9 @@ function App() {
             Contactez nous
           </button>
         </div>
+        <div className="flex justify-center items-center h-full w-full relative -top-32 text-white font-semibold tracking-wide text-4xl">
+          Découvrez les trésors de Madagascar avec nous.
+        </div>
       </div>
 
       <div className="relative rounded-t-3xl -top-5 w-full bg-surface h-full px-56 py-8">
