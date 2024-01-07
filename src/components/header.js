@@ -5,7 +5,12 @@ export default function Header() {
     <div className="flex justify-between items-center px-56 h-24 text-onPrimary w-full bg-primary">
       <div className="font-bold text-xl">Mada Chaland</div>
       <ul className="flex gap-8 justify-center items-center">
-        <NavLink to="/">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "border-b border-onPrimary font-semibold" : ""
+          }
+        >
           <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
             Accueil
           </li>
