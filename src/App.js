@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import useHeadline from "./hooks/useHeadline";
 import useOffers from "./hooks/useOffers";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 function App() {
   const [offers] = useOffers();
@@ -32,13 +33,18 @@ function App() {
               className="grid grid-cols-2 gap-8 items-center"
               key={offer.title}
             >
-              <img
-                src={offer.image}
-                alt=""
-                className={`rounded-xl shadow-xl shadow-primary h-96 w-full object-cover ${
-                  index % 2 !== 0 && "order-last"
-                }`}
-              />
+              <PhotoProvider>
+                <PhotoView src={[offer.image]}>
+                  <img
+                    src={offer.image}
+                    alt=""
+                    className={`rounded-xl shadow-xl shadow-primary h-96 w-full object-cover ${
+                      index % 2 !== 0 && "order-last"
+                    }`}
+                  />
+                </PhotoView>
+              </PhotoProvider>
+
               <div>
                 <div className="text-2xl text-primary font-bold tracking-wider">
                   {offer.title}
