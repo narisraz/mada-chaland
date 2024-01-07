@@ -27,11 +27,12 @@ function App() {
               Partenaires
             </li>
           </ul>
+
           <button className="flex items-center bg-secondary shadow-primary text-onSecondary uppercase rounded-full mt-2 px-8 py-2 shadow-lg hover:scale-110 duration-100">
             Contactez nous
           </button>
         </div>
-        <div className="flex justify-center items-center h-full w-full relative -top-32 text-white font-semibold tracking-wide text-4xl">
+        <div className="flex justify-center items-center text-white font-semibold tracking-wide text-4xl mt-52">
           Découvrez les trésors de Madagascar avec nous.
         </div>
       </div>
