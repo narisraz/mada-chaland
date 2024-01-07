@@ -21,9 +21,16 @@ export default function Header() {
         <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
           Circuits
         </li>
-        <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
-          Partenaires
-        </li>
+        <NavLink
+          to="/partners"
+          className={({ isActive }) =>
+            isActive ? "border-b border-onPrimary font-semibold" : ""
+          }
+        >
+          <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
+            Partenaires
+          </li>
+        </NavLink>
       </ul>
 
       <button className="flex items-center bg-secondary shadow-primary text-onSecondary uppercase rounded-full mt-2 px-8 py-2 shadow-lg hover:scale-110 duration-100">
