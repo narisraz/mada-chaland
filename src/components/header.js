@@ -1,11 +1,15 @@
+import { NavLink } from "react-router-dom";
+
 export default function Header() {
   return (
     <div className="flex justify-between items-center px-56 h-24 text-onPrimary w-full bg-primary">
       <div className="font-bold text-xl">Mada Chaland</div>
       <ul className="flex gap-8 justify-center items-center">
-        <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
-          Accueil
-        </li>
+        <NavLink to="/">
+          <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
+            Accueil
+          </li>
+        </NavLink>
         <li className="hover:border-b hover:border-onPrimary hover:font-semibold duration-150 cursor-pointer">
           A propos
         </li>
