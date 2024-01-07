@@ -14,6 +14,7 @@ export default function useOffers() {
         setOffers(
           res.items.map((offer) => {
             return {
+              id: offer.sys.id,
               title: offer.fields.title,
               description: documentToHtmlString(offer.fields.description),
               image: offer.fields.medias[0].fields.file.url,

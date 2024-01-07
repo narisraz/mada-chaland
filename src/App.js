@@ -46,7 +46,7 @@ function App() {
                 <div
                   dangerouslySetInnerHTML={{ __html: offer.description }}
                 ></div>
-                <Link to={`/offer/${offer + 1}`} className="text-primary">
+                <Link to={`/offer/${offer.id}`} className="text-primary">
                   <button className="flex items-center bg-secondary shadow-primary text-onSecondary uppercase rounded-full mt-2 px-8 py-2 shadow-lg hover:scale-110 duration-100">
                     En savoir plus
                     <img
