@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
-import * as contentful from "contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { content } from "../core/api";
 
 export default function useOffers() {
   const [offers, setOffers] = useState([]);
-  const content = contentful.createClient({
-    space: "6wkh0zv78kbn",
-    accessToken: "69meeX2pV21M4CdcfqHAwcFZfeUuJ4r3IoEgfoYmmE0",
-  });
 
   useEffect(() => {
     content
@@ -25,7 +21,7 @@ export default function useOffers() {
           })
         );
       });
-  }, [content]);
+  }, []);
 
   return [offers];
 }

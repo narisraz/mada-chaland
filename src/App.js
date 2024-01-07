@@ -1,8 +1,10 @@
 import "./App.css";
+import useHeadline from "./hooks/useHeadline";
 import useOffers from "./hooks/useOffers";
 
 function App() {
   const [offers] = useOffers();
+  const [headline] = useHeadline();
 
   return (
     <div className="relative">
@@ -35,9 +37,10 @@ function App() {
             Contactez nous
           </button>
         </div>
-        <div className="flex justify-center items-center text-white font-semibold tracking-wide text-4xl mt-52">
-          Découvrez les trésors de Madagascar avec nous.
-        </div>
+        <div
+          className="flex justify-center items-center text-white font-semibold tracking-wide text-4xl mt-52"
+          dangerouslySetInnerHTML={{ __html: headline }}
+        ></div>
       </div>
 
       <div className="relative rounded-t-3xl -top-5 w-full bg-surface h-full px-56 py-8">
