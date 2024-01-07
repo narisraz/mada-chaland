@@ -5,7 +5,7 @@ import Header from "./components/header";
 import useHeadline from "./hooks/useHeadline";
 import useOffers from "./hooks/useOffers";
 
-function App() {
+function Home() {
   const [offers] = useOffers();
   const [headline] = useHeadline();
 
@@ -20,7 +20,7 @@ function App() {
         }}
       >
         <div
-          className="flex justify-center items-center text-white font-semibold tracking-wide text-4xl m-auto h-full"
+          className="flex justify-center items-center text-white font-semibold tracking-wide text-4xl mt-52"
           dangerouslySetInnerHTML={{ __html: headline }}
         ></div>
       </div>
