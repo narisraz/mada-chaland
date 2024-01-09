@@ -11,6 +11,7 @@ export default function useOffer(offerId) {
         title: offer.fields.title,
         description: documentToHtmlString(offer.fields.description),
         medias: offer.fields.medias.map((media) => media.fields.file.url),
+        price: offer.fields.price,
       });
     });
   }, [offerId]);

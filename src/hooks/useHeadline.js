@@ -7,7 +7,6 @@ export default function useHeadline() {
 
   useEffect(() => {
     content.getEntry("mvM8H2cs7vwzjMVY7cA12").then((res) => {
-      console.log(res);
       setHeadline(documentToHtmlString(res.fields.value));
     });
   }, []);

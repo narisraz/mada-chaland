@@ -1,4 +1,3 @@
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { useEffect, useState } from "react";
 import { content } from "../core/api";
 
@@ -12,10 +11,11 @@ export default function useHotels() {
       })
       .then((res) => {
         setHotels(
-          res.items.map((car) => {
+          res.items.map((hotel) => {
             return {
-              description: documentToHtmlString(car.fields.description),
-              medias: car.fields.medias.map((media) => media.fields.file.url),
+              description: hotel.fields.description,
+              test: hotel.fields.test,
+              medias: hotel.fields.medias.map((media) => media.fields.file.url),
             };
           })
         );

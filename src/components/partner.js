@@ -1,7 +1,6 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 export default function PartnerItem({ partner }) {
-  console.log(partner?.medias);
   return (
     <div className="flex gap-8">
       <PhotoProvider>
